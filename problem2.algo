@@ -1,0 +1,21 @@
+BEGIN
+  Input:
+  - n pairs of vectors (v1 and v2) in IR
+  - n: the number of pairs
+  
+  Output:
+  - For each pair, determine if the vectors are orthogonal
+  
+  PROCEDURE dot_product(v1, v2, ps)
+  VAR
+    i: integer
+
+  1. FOR i FROM 1 TO n DO
+     BEGIN
+       CALL dot_product(v1[i], v2[i], ps)
+       IF ps = 0 THEN
+         OUTPUT "Vectors v1[" + i + "] and v2[" + i + "] are orthogonal."
+       ELSE
+         OUTPUT "Vectors v1[" + i + "] and v2[" + i + "] are NOT orthogonal."
+     END
+END

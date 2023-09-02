@@ -1,0 +1,41 @@
+BEGIN
+  Input:
+  - Two sets of elements, Set1 and Set2
+
+  Output:
+  - The sum of all distinct elements from Set1 and Set2
+
+  VAR
+    distinct_elements: an empty array
+    seen_elements: an empty set
+    sum_distinct: an integer
+
+  Initialize distinct_elements as an empty array
+  Initialize seen_elements as an empty set
+  Initialize sum_distinct as 0
+
+  FOR EACH element e IN Set1 DO
+     BEGIN
+       IF e is NOT IN seen_elements THEN
+         BEGIN
+           Add e to seen_elements
+           Append e to distinct_elements
+         END
+     END
+
+  FOR EACH element e IN Set2 DO
+     BEGIN
+       IF e is NOT IN seen_elements THEN
+         BEGIN
+           Add e to seen_elements
+           Append e to distinct_elements
+         END
+     END
+
+  FOR EACH element e IN distinct_elements DO
+     BEGIN
+       Add e to sum_distinct
+     END
+
+  Return sum_distinct as the result
+END
